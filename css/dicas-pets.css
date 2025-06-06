@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  font-family: "Gabarito", sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+    --cor-base-1: #252525;
+    --cor-base-2: #F1F1F1;
+    --azul-primario: #17BEBB;
+    --azul-secundario: #96E9E7;
+    --laranja-primario: #FCAB64;
+    --laranja-secundario: #FCD29F;
+}
+
+
+
+.header {
+  background-color: var(--cor-base-2);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  background-color: var(--cor-base-2);
+  width: 100%;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+
+.logo img {
+  height: 40px;
+}
+
+.slogan {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--laranja-primario);
+}
+
+.breadcrumb {
+  font-size: 14px;
+  padding: 10px 100px;
+  color: var(--cor-base-1);
+  margin-top: 40px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--cor-base-1);
+}
+
+.shelter-section {
+  padding: 10px 100px 100px;
+}
+
+.shelter-section h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--cor-base-1);
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  border-radius: 90px;
+  overflow: hidden;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toggle-buttons button {
+  padding: 20px 40px;
+  border: none;
+  background-color: var(--azul-secundario);
+  color: var(--azul-primario);
+  font-weight: 600;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-buttons button.active {
+  background-color: var(--azul-primario);
+  color: var(--cor-base-2);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin-top: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  padding: 26px;
+  border-radius: 16px;
+  background-color: var(--laranja-secundario);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 24px;
+  font-weight: medium;
+  text-align: center;
+}
+
+.card button,
+.card a {
+  align-self: center;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 120px;
+  background-color: var(--laranja-primario);
+  color: var(--cor-base-2);
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.card button:hover,
+.card a:hover {
+  background-color: var(--azul-primario);
+  transition: 0.3s;
+}
+
+.footer-bottom {
+  background-color: var(--laranja-secundario);
+  text-align: center;
+  font-size: 12px;
+  padding: 100px;
+  color: #333;
+  font-weight: bold;
+}
+
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.breadcrumb {
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+.shelter-section {
+  padding: 10px 0 100px;
+}
+
+
+.footer-background {
+  background-color: var(--laranja-secundario);
+  width: 100%;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  padding: 40px 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+
+@media (max-width: 992px) {
+  .shelter-section h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .toggle-buttons button {
+    font-size: 18px;
+    padding: 16px 30px;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+
+  .card button,
+  .card a {
+    font-size: 18px;
+    padding: 6px 24px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+    padding: 40px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .slogan {
+    font-size: 16px;
+  }
+
+  .breadcrumb {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .toggle-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .toggle-buttons button {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .shelter-section h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .card button,
+  .card a {
+    font-size: 16px;
+    padding: 6px 20px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+}

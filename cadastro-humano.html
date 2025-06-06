@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro Humano</title>
+  <link rel="icon" href="./assets/img/icon/logo2.png" />
+  <link rel="stylesheet" href="./css/cadastro-pet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <img src="./assets/img/icon/logo1.png" alt="Logo ARCARE" />
+      </div>
+      <button id="btn-manu" class="manu-btn">
+        manu.pereira <img src="./assets/img/icon/usuario.png" alt="ícone usuário" style="width: 16px; margin-left: 6px;" />
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  <div class="container">
+    <a href="./index.html">Home</a> &gt; <strong>Cadastro Humanos & Pets</strong>
+  </div>
+</nav>
+
+<section class="ajuda-chamada container">
+  <h1>Cadastre para agilizar a ajuda</h1>
+  <p>Preencha os dados para que a pessoa possa ser identificada e socorrida rapidamente.</p>
+</section>
+
+<div class="toggle-buttons">
+  <button onclick="window.location.href='cadastro-pet.html'">Para Animais</button>
+  <button class="active">Para Humanos</button>
+</div>
+
+<form class="formulario container">
+  <div class="form-linha">
+    <div class="form-group">
+      <label>Nome completo: *</label>
+      <input type="text" required />
+    </div>
+    <div class="form-group">
+      <label>Data de nascimento: *</label>
+      <input type="date" required />
+    </div>
+  </div>
+
+  <div class="form-linha">
+    <div class="form-group">
+      <label>CPF: *</label>
+      <input type="text" required />
+    </div>
+    <div class="form-group">
+      <label>Endereço: *</label>
+      <input type="text" required />
+    </div>
+  </div>
+
+  <div class="form-linha">
+    <div class="form-group">
+      <label>E-mail: *</label>
+      <input type="email" required />
+    </div>
+    <div class="form-group">
+      <label>Telefone: *</label>
+      <input type="tel" required />
+    </div>
+  </div>
+
+  <div class="form-linha">
+    <div class="form-group">
+      <label>Nome do contato de emergência: *</label>
+      <input type="text" required />
+    </div>
+    <div class="form-group">
+      <label>Telefone do contato de emergência: *</label>
+      <input type="tel" required />
+    </div>
+  </div>
+
+  <div class="form-group full-width">
+    <label>Foto (upload de imagem com até x de tamanho): *</label>
+    <input type="file" required />
+  </div>
+
+  <div class="form-group full-width center">
+    <button type="button" class="btn-cadastrar" onclick="window.location.href='humanos-cadastrados.html'">Cadastrar</button>
+  </div>
+</form>
+
+<script src="./js/modal.js"></script>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <p>Arcare – Desenvolvido para a Global Solution<br>
+    Evelin Hashimoto · Flávia Pereira Santana · Rebecca Martins<br>
+    2025</p>
+  </div>
+</footer>
+</body>
+</html>

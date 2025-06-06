@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Localize pessoas & pets</title>
+    <link rel="stylesheet" href="./css/localize.css" />
+    <link rel="icon" href="./assets/img/icon/logo2.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="./assets/img/icon/logo1.png" alt="Logo ARCARE" />
+            </div>
+
+            <nav class="nav-links">
+                <a href="./index.html">Como podemos ajudar?</a>
+                <a href="./index.html">Nosso Propósito</a>
+                <a href="./index.html">Contatos de Emergência</a>
+            </nav>
+
+            <div class="header-buttons">
+                <a href="./cadastro.html" class="btn-smallcadastrar">Cadastrar</a>
+                <a href="./login.html" class="btn-small">Entrar</a>
+            </div>
+        </div>
+    </header>
+
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="./index.html">Página inicial</a> &gt; <strong>Localize pessoas & pets</strong>
+        </div>
+    </nav>
+
+    <section class="ajuda-chamada">
+        <h1>Localize pessoas & pets</h1>
+        <p></p>
+    </section>
+
+
+    <section class="busca-container">
+        <h2>Buscar pessoa ou pet</h2>
+        <div class="barra-de-busca">
+            <input type="text" id="input-busca" placeholder="Digite o nome da pessoa ou o nome do pet" />
+            <button onclick="buscarCadastro()">Buscar</button>
+        </div>
+
+        <div id="resultado-busca" class="resultado-busca"></div>
+    </section>
+
+
+    <div class="footer-bottom">
+        <p>Arcare – Desenvolvido para a Global Solution<br>
+            Evelin Hashimoto · Flávia Pereira Santana · Rebecca Martins<br>
+            2025</p>
+    </div>
+    </footer>
+
+
+    <div id="modal-manu" class="modal">
+        <div class="modal-content">
+            <p>Deseja realmente sair?</p>
+            <div class="modal-buttons">
+                <button onclick="logout()">Sair</button>
+                <button onclick="closeModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btnManu = document.getElementById("btn-manu");
+        const modal = document.getElementById("modal-manu");
+
+        btnManu.addEventListener("click", () => {
+            modal.style.display = "flex";
+        });
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        function logout() {
+            window.location.href = "index.html";
+        }
+
+        window.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+    <script>
+        function buscarCadastro() {
+            const termo = document.getElementById("input-busca").value.trim().toLowerCase();
+            const resultado = document.getElementById("resultado-busca");
+            resultado.innerHTML = "";
+
+            const dadosFakes = [
+                {
+                    tipo: "pessoa",
+                    nome: "Manuela Pereira",
+                    idade: "28 anos",
+                    abrigo: "Abrigo Esperança",
+                    imagem: "./assets/img/icon/manuela.jpg"
+                },
+                {
+                    tipo: "pessoa",
+                    nome: "Sabrina Pereira",
+                    idade: "22 anos",
+                    abrigo: "Abrigo Esperança",
+                    imagem: "./assets/img/icon/irmã.png"
+                },
+                {
+                    tipo: "pessoa",
+                    nome: "Jorge Pereira",
+                    idade: "55 anos",
+                    abrigo: "Abrigo Esperança",
+                    imagem: "./assets/img/icon/pai.png"
+                },
+                {
+                    tipo: "pet",
+                    nome: "Shark",
+                    idade: "5 anos",
+                    abrigo: "Abrigo Pets",
+                    imagem: "./assets/img/icon/pet1.png"
+                },
+                {
+                    tipo: "pet",
+                    nome: "Nina",
+                    idade: "2 anos",
+                    abrigo: "Abrigo Anjos",
+                    imagem: "./assets/img/icon/pet2.png"
+                },
+                {
+                    tipo: "pet",
+                    nome: "Luna",
+                    idade: "8 anos",
+                    abrigo: "Abrigo Aumigo",
+                    imagem: "./assets/img/icon/pet3.jpg"
+                }
+            ];
+
+            // 🔍 Se o campo estiver vazio, mostra todos
+            const encontrados = termo
+                ? dadosFakes.filter(item => item.nome.toLowerCase().includes(termo))
+                : dadosFakes;
+
+            if (encontrados.length === 0) {
+                resultado.innerHTML = "<p>Nenhum cadastro encontrado.</p>";
+            } else {
+                encontrados.forEach(item => {
+                    const card = document.createElement("div");
+                    card.className = "card-busca";
+                    card.innerHTML = `
+    <img src="${item.imagem}" alt="${item.nome}" class="card-img" />
+    <h3>${item.nome}</h3>
+    <p>${item.idade}</p>
+    <p><strong>Abrigo:</strong> ${item.abrigo}</p>
+    <button class="edit-btn">Entrar em contato</button>
+`;
+
+                    resultado.appendChild(card);
+                });
+            }
+        }
+
+    </script>
+</body>
+
+</html>

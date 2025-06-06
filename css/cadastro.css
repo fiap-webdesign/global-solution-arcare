@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: 'Gabartito', sans-serif;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: #f5f5f5;
+}
+
+.login-logo {
+  height: 40px;
+}
+
+.login-slogan {
+  font-size: 16px;
+  color: #f8a24b;
+  font-weight: 500;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  padding: 10px 40px;
+  color: #333;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #333;
+}
+
+.login-header,
+.breadcrumb,
+.login-container {
+  padding: 16px 0;
+}
+
+.login-header .container,
+.breadcrumb .container,
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.login-image img {
+  max-width: 660px;
+  width: 100%;
+  margin-right: 50px;
+}
+
+.login-form {
+  max-width: 320px;
+  width: 100%;
+}
+
+.login-form h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-form p {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.login-form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #a5f1f0;
+  margin-bottom: 14px;
+}
+
+.login-form button {
+  width: 60%;
+
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  background-color: #f8a24b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.login-form input,
+.login-form button {
+  box-sizing: border-box;
+}
+
+
+
+.divider {
+  text-align: center;
+  font-size: 14px;
+  margin: 20px 0 10px;
+}
+
+.google-icon {
+  width: 40px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.cadastro {
+  font-size: 14px;
+  text-align: center;
+}
+
+.cadastro a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.login-footer {
+  background-color: #FCD29F;
+  text-align: center;
+  font-size: 12px;
+  padding: 100px;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-arcare {
+  background-color: #f8a24b;
+  color: #FCD29F;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.btn-arcare:hover {
+  background-color: #e18f39;
+  color: #FCD29F;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARCARE</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon/logo2.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/login-realizado.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="#inicio"><img src="./assets/img/icon/logo1.png" alt="Logo ARCARE" /></a>
+      </div>
+      <nav class="menu">
+        <a href="#sec1">Como podemos ajudar?</a>
+        <a href="#sec2">Nosso Propósito</a>
+        <a href="#sec3">Contatos de Emergência</a>
+      </nav>
+
+      <button id="btn-manu" class="manu-btn">
+        manu.pereira <img src="./assets/img/icon/usuario.png" alt="ícone usuário"
+          style="width: 16px; margin-left: 6px;" />
+      </button>
+
+      <div id="modal-manu" class="modal">
+        <div class="modal-content">
+          <p>Deseja realmente sair?</p>
+          <div class="modal-buttons">
+            <button onclick="logout()">Sair</button>
+            <button onclick="closeModal()">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-texto">
+        <h1>ARCARE: a Arca que Cuida de Todos</h1>
+        <p>ARCARE é o projeto que conecta vidas em situações de desastre, resgatando pessoas e seus pets com agilidade e segurança. <br>Nossa missão é proteger quem mais importa, oferecendo suporte rápido para salvar e reunir famílias em momentos de crise. Porque cuidar de todos é o nosso compromisso!</p>
+        <div class="hero-botoes">
+          <button onclick="window.location.href='cadastro-humano.html'">Preciso de ajuda</button>
+          <button onclick="window.location.href='doacoes.html'">Quero ajudar</button>
+        </div>
+      </div>
+      <div class="hero-imagem">
+        <img src="./assets/img/icon/familia.jpg" alt="Imagem ilustrativa" />
+      </div>
+    </div>
+  </section>
+
+  <section class="ajuda-container">
+    <div id="sec1" class="container">
+      <h2>Como podemos ajudar?</h2>
+      <p>Estamos aqui para oferecer suporte com qualquer dúvida, problema ou sugestão que você tenha. Fale conosco e teremos prazer em atender!</p>
+    </div>
+  </section>
+
+<section class="card-grid container">
+  <div class="card">
+    <h2>Cadastro de Pessoas & Pets</h2>
+    <p>Registre humanos e pets para resgate conjunto</p>
+    <button onclick="window.location.href='login.html'">Cadastrar</button>
+  </div>
+
+  <div class="card">
+    <h2>Localize Pessoas & Pets</h2>
+    <p>Encontre ou anuncie pessoas e/ou pets perdidos</p>
+    <button onclick="window.location.href='localize.html'">Buscar</button>
+  </div>
+
+  <div class="card">
+    <h2>Descubra abrigos</h2>
+    <p>Encontre abrigos para você e/ou seu pet</p>
+    <button onclick="window.location.href='abrigos.html'">Ver mapa</button>
+  </div>
+
+  <div class="card">
+    <h2>Alertas e Rotas Seguras</h2>
+    <p>Veja zonas de risco e rotas com pets</p>
+    <button onclick="window.location.href='alertas.html'">Ver alertas</button>
+  </div>
+
+  <div class="card">
+    <h2>Doações e Suprimentos</h2>
+    <p>Doe para abrigos que necessitam de ajuda</p>
+    <button onclick="window.location.href='doacoes.html'">Fazer doação</button>
+  </div>
+
+  <div class="card">
+    <h2>Dicas de primeiros socorros</h2>
+    <p>Aprenda como agir em situações de emergência e salve vidas</p>
+    <button onclick="window.location.href='dicas-humanos.html'">Ver dicas</button>
+  </div>
+</section>
+
+  <section id="sec2" class="proposito-container">
+    <div class="container proposito-conteudo">
+      <div class="proposito-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/utiskFc8OEQ?si=sqcY0vwbpGfUqEcy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="proposito-texto">
+        <h2>Nosso Propósito</h2>
+        <p>
+          Nosso compromisso é com a vida. A ARCARE nasceu para ser uma ponte entre a esperança e a ação durante
+          desastres. Unimos tecnologia, solidariedade e agilidade para garantir que pessoas e seus pets não fiquem
+          desamparados em momentos críticos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="sec3" class="emergencia-container container">
+    <h2>Contatos de Emergência</h2>
+    <p style="font-size: 18px; max-width: 700px; margin: 0 auto 30px; line-height: 1.6; color: #555;">
+      Em situações de crise, é essencial contar com canais rápidos e confiáveis de comunicação. Aqui você encontra os
+      principais contatos para acionar resgates, atendimento veterinário de urgência, ajuda psicológica e apoio
+      logístico para pessoas e animais.
+    </p>
+
+  </section>
+  <section class="contatos-container container">
+    <div class="mini-card">Polícia Militar<br><strong>190</strong></div>
+    <div class="mini-card azul">SAMU<br><strong>192</strong></div>
+    <div class="mini-card">Corpo de Bombeiros<br><strong>193</strong></div>
+    <div class="mini-card azul">Defesa Civil<br><strong>199</strong></div>
+    <div class="mini-card">Defesa Animal<br><strong>0800-600-6428</strong></div>
+    <div class="mini-card azul">Resgate Animais Silvestres<br><strong>(11) 5067-1810</strong></div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-logo">
+        <img src="./assets/img/icon/logo1.png" alt="Logo ARCARE" class="logo-footer" />
+      </div>
+      <div class="footer-social">
+        <a href="#"><img src="./assets/img/icon/youtube.png" alt="YouTube" /></a>
+        <a href="#"><img src="./assets/img/icon/facebook (2).png" alt="Facebook" /></a>
+        <a href="#"><img src="./assets/img/icon/instagram (2).png" alt="Instagram" /></a>
+      </div>
+    </div>
+
+
+    <div class="container footer-columns">
+      <div class="footer-col">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#">Como podemos ajudar?</a></li>
+          <li><a href="#">Nosso propósito</a></li>
+          <li><a href="#">Contatos de emergência</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Funcionalidades</h3>
+        <ul>
+          <li><a href="#">Cadastro de pessoas e pets</a></li>
+          <li><a href="#">Localizar pessoas e pets</a></li>
+          <li><a href="#">Alertas e Rotas Seguras</a></li>
+          <li><a href="#">Doações e Suprimentos</a></li>
+          <li><a href="#">Abrigos disponíveis</a></li>
+          <li><a href="#">Primeiros Socorros</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contato</h3>
+        <p>Telefone: (11) 91234–5678</p>
+        <p>E-mail: arcare@gmail.com</p>
+        <p>SAC: 0800 123-456</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Arcare – Desenvolvido para a Global Solution<br>
+        Evelin Hashimoto · Flávia Pereira Santana · Rebecca Martins<br>
+        2025</p>
+    </div>
+  </footer>
+
+  <script>
+  const btnManu = document.getElementById("btn-manu");
+  const modal = document.getElementById("modal-manu");
+
+  btnManu.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  function logout() {
+
+    window.location.href = "login.html";
+  }
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+</body>
+</html>
