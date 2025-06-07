@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro Pet</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon/logo2.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/cadastro-pet.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <img src="./assets/img/icon/logo1.png" alt="Logo ARCARE" />
+      </div>
+      <button id="btn-manu" class="manu-btn">
+        manu.pereira <img src="./assets/img/icon/usuario.png" alt="ícone usuário" style="width: 16px; margin-left: 6px;" />
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<nav class="breadcrumb">
+  <div class="container">
+    <a href="./index.html">Home</a> &gt; <strong>Cadastro Humanos & Pets</strong>
+  </div>
+</nav>
+
+<section class="ajuda-chamada container">
+  <h1>Cadastre para agilizar a ajuda</h1>
+  <p>Preencha os dados do animal para que ele possa ser identificado e socorrido rapidamente.</p>
+</section>
+
+  <div class="toggle-buttons">
+    <button onclick="window.location.href='cadastro-humano.html'">Para Humanos</button>
+    <button class="active">Para Animais</button>
+  </div>
+
+  <form id="form-animais" class="formulario">
+    <div class="form-linha">
+      <div class="form-group">
+        <label>Nome do animal: *</label>
+        <input type="text" required />
+      </div>
+      <div class="form-group">
+        <label>Data de nascimento aproximada: *</label>
+        <input type="date" required />
+      </div>
+    </div>
+    <div class="form-linha">
+      <div class="form-group">
+        <label>RGA:</label>
+        <input type="text" />
+      </div>
+      <div class="form-group">
+        <label>Nome do tutor: *</label>
+        <input type="text" required />
+      </div>
+    </div>
+    <div class="form-linha">
+      <div class="form-group">
+        <label>E-mail do tutor: *</label>
+        <input type="email" required />
+      </div>
+      <div class="form-group">
+        <label>Endereço do tutor: *</label>
+        <input type="text" required />
+      </div>
+    </div>
+    <div class="form-linha">
+      <div class="form-group">
+        <label>Telefone do tutor: *</label>
+        <input type="tel" required />
+      </div>
+      <div class="form-group">
+        <label>Telefone do contato de emergência: *</label>
+        <input type="tel" required />
+      </div>
+    </div>
+    <div class="form-linha">
+      <div class="form-group">
+        <label>Espécie: *</label>
+        <input type="text" required />
+      </div>
+      <div class="form-group">
+        <label>Porte:</label>
+        <select>
+          <option value="">Selecione</option>
+          <option value="Pequeno">Pequeno</option>
+          <option value="Médio">Médio</option>
+          <option value="Grande">Grande</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-linha">
+      <div class="form-group">
+        <label>Sexo: *</label>
+        <select required>
+          <option value="">Selecione</option>
+          <option value="Macho">Macho</option>
+          <option value="Fêmea">Fêmea</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Foto (upload de imagem com até x de tamanho): *</label>
+        <input type="file" required />
+      </div>
+    </div>
+    <div class="form-group full-width">
+      <label>Descrição do animal: *</label>
+      <textarea rows="4" required></textarea>
+    </div>
+    <div class="form-group full-width center">
+  <button type="button" class="btn-cadastrar" onclick="window.location.href='pet-cadastrado.html'">Cadastrar</button>
+</div>
+
+  </form>
+
+  <div id="modal-animal-sucesso" class="modal">
+  <div class="modal-content">
+    <p>Cadastro do animal realizado com sucesso!</p>
+    <div class="modal-buttons">
+      <button onclick="closeAnimalSuccessModal()">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script src="./js/modal.js"></script>
+
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <p>Arcare – Desenvolvido para a Global Solution<br>
+    Evelin Hashimoto · Flávia Pereira Santana · Rebecca Martins<br>
+    2025</p>
+  </div>
+</footer>
+</body>
+
+<div id="modal-manu" class="modal">
+  <div class="modal-content">
+    <p>Deseja realmente sair?</p>
+    <div class="modal-buttons">
+      <button onclick="logout()">Sair</button>
+      <button onclick="closeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+</html>

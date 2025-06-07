@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: "Gabarito", sans-serif;
+}
+
+:root {
+    --cor-base-1: #252525;
+    --cor-base-2: #F1F1F1;
+    --azul-primario: #17BEBB;
+    --azul-secundario: #96E9E7;
+    --laranja-primario: #FCAB64;
+    --laranja-secundario: #FCD29F;
+}
+
+.header {
+  background-color: var(--cor-base-2);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.slogan {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--laranja-primario);
+}
+
+.breadcrumb {
+  font-size: 14px;
+  padding: 10px 100px;
+  color: var(--cor-base-1);
+  margin-top: 40px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--cor-base-1);
+}
+
+.shelter-section {
+  padding: 10px 100px 100px;
+}
+
+.shelter-section h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--cor-base-1);
+  margin-bottom: 2px;
+}
+
+.padrao-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.padrao-corte h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--cor-base-1);
+  margin-bottom: 12px;
+}
+
+.padrao-corte .descricao {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--cor-base-1);
+  max-width: 100%;
+}
+
+.imagem-padrao img {
+  width: 70%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.footer-bottom {
+  background-color: var(--laranja-secundario);
+  text-align: center;
+  font-size: 12px;
+  padding: 100px;
+  color: #333;
+  font-weight: bold;
+}

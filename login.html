@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="./css/login.css" />
+  <link rel="icon" type="image/png" href="./assets/img/icon/logo2.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header class="login-header">
+    <div class="container">
+      <a href="./index.html"><img src="./assets/img/icon/logo1.png" alt="Logo ARCARE" class="login-logo" /></a>
+      <span class="login-slogan">A Arca que Cuida de Todos</span>
+    </div>
+  </header>
+
+
+  <nav class="breadcrumb">
+    <div class="container">
+      <a href="./index.html">Página inicial</a> &gt; <strong>Login</strong>
+    </div>
+  </nav>
+
+
+  <main class="login-container">
+    <div class="login-image">
+      <img src="./assets/img/icon/logo2.png" alt="Ilustração login" />
+    </div>
+
+    <div class="login-form">
+      <h2>Login</h2>
+      <p>Por favor, preencha os dados:</p>
+      <form onsubmit="return validarLogin(event)">
+        <label for="cpf">CPF: *</label>
+        <input type="text" id="cpf" placeholder="Digite seu CPF" required />
+
+        <label for="senha">Senha: *</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required />
+
+        <button type="submit" >Login</button>
+      </form>
+
+
+      <p class="divider">Ou faça o login com sua conta Google:</p>
+      <a href="#"><img src="./assets/img/icon/google.png" alt="Login com Google" class="google-icon" /></a>
+
+      <p class="cadastro">Não tem conta? <a href="./cadastro.html">Cadastre-se aqui</a></p>
+    </div>
+  </main>
+
+  <footer class="login-footer">
+    <p>Arcare – Desenvolvido para a Global Solution</p>
+    <p>Evelin Hashimoto · Flávia Pereira Santana · Rebecca Martins</p>
+    <p>2025</p>
+  </footer>
+</body>
+
+<script>
+  function validarLogin(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    if (form.checkValidity()) {
+      window.location.href = 'login-realizado.html';
+    } else {
+      form.reportValidity();
+    }
+  }
+</script>
+
+</html>

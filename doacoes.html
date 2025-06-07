@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações e Suprimentos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/doacoes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="./index.html"><img src="./assets/img/icon/logo1.png" alt="Logo ARCARE" /></a>
+            </div>
+            <nav class="menu">
+                <a href="./index.html">Como podemos ajudar?</a>
+                <a href="./index.html">Nosso Propósito</a>
+                <a href="./index.html">Contatos de Emergência</a>
+            </nav>
+            <div class="botoes">
+                <a href="./cadastro.html"><button class="btn-cadastrar">Cadastrar</button></a>
+                <a href="./login.html"><button class="btn-entrar">Entrar</button></a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="./index.html">Página inicial</a> &gt; <strong>Doações e suprimentos</strong>
+        </div>
+    </nav>
+
+    <main class="container-doacoes">
+        <div class="container">
+            <h1 class="titulo-esquerda">Ajude com doações e suprimentos</h1>
+            <p class="texto-explicativo">
+                Todas as doações recebidas são utilizadas exclusivamente para os propósitos humanitários do projeto
+                ARCARE.
+                Prezamos pela transparência: você será informado sobre como e onde sua doação está sendo aplicada,
+                garantindo confiança e compromisso com cada contribuição recebida.
+            </p>
+        </div>
+
+
+        <div class="filtros">
+            <input type="text" id="cep" placeholder="Digite o seu CEP ou cidade">
+            <select id="tipoDoacao">
+                <option value="">Tipo de doação</option>
+                <option value="roupa">Roupas</option>
+                <option value="alimentos">Alimentos</option>
+                <option value="higiene">Higiene</option>
+                <option value="racao">Ração</option>
+                <option value="dinheiro">Dinheiro</option>
+            </select>
+            <button id="btnBuscar">Buscar</button>
+        </div>
+
+        <section id="locaisDoacao" class="abrigos hidden">
+            <div class="card">
+                <h3>Centro Solidário</h3>
+                <p class="paragrafo">Doe para pessoas e pets!</p>
+                <p>Endereço:  Rua Lorem, 123</p>
+                <button>Ver no mapa</button>
+            </div>
+            <div class="card">
+                <h3>Abrigo Esperança</h3>
+                <p class="paragrafo">Doe para pessoas e pets!</p>
+                <p>Avenida Jabaquara, 273</p>
+                <button>Ver no mapa</button>
+            </div>
+            <div class="card">
+                <h3>Casa Amiga</h3>
+                <p class="paragrafo">Doe para pessoas e pets!</p>
+                <p>Travessa Rio Grande, 58</p>
+                <button>Ver no mapa</button>
+            </div>
+        </section>
+
+        <section id="pixSection" class="pix hidden">
+            <div class="pix-info">
+                <h3>Doe agora via pix!</h3>
+                <p>As doações via PIX são destinadas com total transparência às ações de resgate, acolhimento e bem-estar de pessoas e animais afetados por desastres. <br>A ARCARE assegura que cada contribuição seja aplicada com responsabilidade, e você poderá acompanhar onde e como sua ajuda está sendo usada.</p>
+            </div>
+            <div class="pix-qr">
+                <p>Escaneie o QRCode</p>
+                <img src="./assets/img/icon/qrcode.png" alt="QR Code">
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-logo">
+                <img src="./assets/img/icon/logo1.png" alt="Logo ARCARE" class="logo-footer" />
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="./assets/img/icon/youtube.png" alt="YouTube" /></a>
+                <a href="#"><img src="./assets/img/icon/facebook (2).png" alt="Facebook" /></a>
+                <a href="#"><img src="./assets/img/icon/instagram (2).png" alt="Instagram" /></a>
+            </div>
+        </div>
+
+        <div class="container footer-columns">
+            <div class="footer-col">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./index.html">Como podemos ajudar?</a></li>
+                    <li><a href="./index.html">Nosso propósito</a></li>
+                    <li><a href="./index.html">Contatos de emergência</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Funcionalidades</h3>
+                <ul>
+                    <li><a href="./cadastro-humano.html">Cadastro de pessoas e pets</a></li>
+                    <li><a href="./localize.html">Localizar pessoas e pets</a></li>
+                    <li><a href="./alertas.html">Alertas e Rotas Seguras</a></li>
+                    <li><a href="./doacoes.html">Doações e Suprimentos</a></li>
+                    <li><a href="./abrigos.html">Abrigos disponíveis</a></li>
+                    <li><a href="./index.html">Primeiros Socorros</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>Telefone: (11) 91234–5678</p>
+                <p>E-mail: arcare@gmail.com</p>
+                <p>SAC: 0800 123-456</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Arcare – Desenvolvido para a Global Solution<br>
+                Evelin Hashimoto · Flávia Pereira Santana · Rebecca Martins<br>
+                2025</p>
+        </div>
+    </footer>
+
+    <script src="./js/doacoes.js"></script>
+</body>
+
+</html>
